@@ -1,7 +1,5 @@
 # enrollee-service
-```
-![Java CI with Maven](https://github.com/venkateshreddypala/enrollee-service/workflows/Java%20CI%20with%20Maven/badge.svg)
-```
+
 
 This is a take home assignment by Centene. The below are the project requirements were provided by Centene. 
 ```
