@@ -84,8 +84,6 @@ This API also provides the following resources mapped to the respective HTTP met
 - GET	/rewards/{name}/{id}	Given a reward, get filtered list of name that contain the given tag id
 - PUT	/transaction/{transaction}/{id}	To update a specific transaction associated with the given id/user.
 - DELETE /transaction/{id}	To delete a specific transaction associated with the given user.
-```
-
 
 ```
 Example model outputs the following using GET method
@@ -93,18 +91,18 @@ Example model outputs the following using GET method
 - "status" - This is a boolean, which checks the existing status
 - "name" - This is an array to insert name when a new enrollee is created in the system
 
-
+```
+## Deployment
+```
+> Base URI: http://localhost:8080/
 ```
 
-## Deployment
-
-> Base URI: http://localhost:8080/
-
 ## Built With
+```
 * [Java] (https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) - Java Platform
 * [Maven](https://maven.apache.org/) - Dependency Management
 * [Postman](https://www.getpostman.com/)- HTTP client to test the REST calls
-
+```
 
 ## Authors
 
