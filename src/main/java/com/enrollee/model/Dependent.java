@@ -8,19 +8,19 @@ import java.sql.Date;
 
 public class Dependent {
     @Id
-    private Integer id;
+    private String id;
 
     private String name;
 
 
-    private Date dateOfBirth;
+    private String dateOfBirth;
 
 
-    public Integer getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -32,11 +32,11 @@ public class Dependent {
         this.name = name;
     }
 
-    public Date getDateOfBirth() {
+    public String getDateOfBirth() {
         return dateOfBirth;
     }
 
-    public void setDateOfBirth(Date dateOfBirth) {
+    public void setDateOfBirth(String dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
     }
 }

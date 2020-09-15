@@ -21,31 +21,47 @@ public class EnrolleeService {
 
     }
 
-    public void delete(Integer id) {
+    public void delete(String id) {
         Optional<Enrollee> enrollee = enrolleeRepository.findById(id);
-        if (enrollee.isPresent()) {
-            enrolleeRepository.delete(enrollee.get());
-        }
+        enrollee.ifPresent(value -> enrolleeRepository.delete(value));
     }
 
-    public Enrollee findEnrollee(Integer id) {
+    public Enrollee findEnrollee(String id) {
         return enrolleeRepository.findById(id).get();
     }
 
-    public Enrollee updateEnrollee(Enrollee enrollee, Integer id) {
+    public Enrollee updateEnrollee(Enrollee enrollee, String id) {
         Enrollee existing = enrolleeRepository.findById(id).get();
         return enrolleeRepository.save(existing);
     }
 
-    public Enrollee createDependant(Dependent dependent, Integer id) {
+    public Enrollee createDependant(Dependent dependent, String id) {
         Optional<Enrollee> enrollee = enrolleeRepository.findById(id);
         if (enrollee.isPresent()) {
             if (enrollee.get().getDependents() != null) {
+                dependent.setId(enrollee.get().getId()+""+enrollee.get().getDependents().size());
                 enrollee.get().getDependents().add(dependent);
             } else {
+                dependent.setId(enrollee.get().getId()+"1");
                 enrollee.get().setDependents(Arrays.asList(dependent));
             }
         }
-        return enrollee.get();
+        return enrolleeRepository.save(enrollee.get());
     }
+
+    public Enrollee updateDependant(Dependent dependent, String id) {
+        Optional<Enrollee> enrollee = enrolleeRepository.findById(id);
+        if (enrollee.isPresent()) {
+            if (enrollee.get().getDependents() != null) {
+                enrollee.get().getDependents().stream().map(d -> {
+                    if(d.getId().equals(dependent.getId())) {
+                        return dependent;
+                    }else {return d;
+                    }
+                });
+            }
+        }
+        return enrolleeRepository.save(enrollee.get());
+    }
+
 }

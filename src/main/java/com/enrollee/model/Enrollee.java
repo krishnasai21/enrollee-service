@@ -12,25 +12,25 @@ import java.util.List;
 public class Enrollee implements Serializable {
 
     @Id
-    private Integer id;
+    private String id;
 
     private String name;
 
     private Boolean status;
 
 
-    private Date dateOfBirth;
+    private String dateOfBirth;
 
     private String phone;
 
 
     private List<Dependent>  dependents;
 
-    public Integer getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -50,11 +50,11 @@ public class Enrollee implements Serializable {
         this.status = status;
     }
 
-    public Date getDateOfBirth() {
+    public String getDateOfBirth() {
         return dateOfBirth;
     }
 
-    public void setDateOfBirth(Date dateOfBirth) {
+    public void setDateOfBirth(String dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
     }
 
