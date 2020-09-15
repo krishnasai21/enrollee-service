@@ -32,6 +32,8 @@ What things you need to install the software and how to install them
 ```
 Java
 Maven
+Mongo
+Docker
 ```
 
 ### Installing
