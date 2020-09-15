@@ -1,4 +1,4 @@
-# Spectrum_RESTful
+# enrollee-service
 
 This is a take home assignment by Centene. The below are the project requirements were provided by Centene. 
 ```
