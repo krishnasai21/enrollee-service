@@ -77,16 +77,7 @@ Example Model to create a new dependent using POST method:
   "dateOfBirth": "string",
 }
 ```
-This API also provides the following resources mapped to the respective HTTP methods which supports CRUD operations for a Transaction.
-```
-- POST	/transaction/{transaction}/user- To create a new Transaction
-- GET	/transaction/{id}/rewards	To get all Rewards
-- GET	/transaction/{transaction}/id	To get all the transaction associated to the specified user with an id.
-- GET	/rewards/{name}/{id}	Given a reward, get filtered list of name that contain the given tag id
-- PUT	/transaction/{transaction}/{id}	To update a specific transaction associated with the given id/user.
-- DELETE /transaction/{id}	To delete a specific transaction associated with the given user.
 
-```
 Example model outputs the following using GET method
 ```
 - "status" - This is a boolean, which checks the existing status
